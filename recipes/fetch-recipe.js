@@ -1,61 +1,61 @@
-export const getRecipe = async urlKey => {
+const getRecipe = async urlKey => {
     try {
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${urlKey}`);
 
         if (!response.ok) throw new Error("/Failed to get recipe/");
         
         const jsonData = await response.json();
+
         return {
-            meal: jsonData.strMeal,
-            category: jsonData.strCategory,
-            area: jsonData.strArea,
-            instructions: jsonData.strInstructions,
-            thumb: jsonData.strMealThumb,
+            meal: jsonData.meals[0].strMeal,
+            category: jsonData.meals[0].strCategory,
+            area: jsonData.meals[0].strArea,
+            instructions: jsonData.meals[0].strInstructions,
+            thumb: jsonData.meals[0].strMealThumb,
             ingredients: [
-                jsonData.strIngredient1,
-                jsonData.strIngredient2,
-                jsonData.strIngredient3,
-                jsonData.strIngredient4,
-                jsonData.strIngredient5,
-                jsonData.strIngredient6,
-                jsonData.strIngredient7,
-                jsonData.strIngredient8,
-                jsonData.strIngredient9,
-                jsonData.strIngredient10,
-                jsonData.strIngredient11,
-                jsonData.strIngredient12,
-                jsonData.strIngredient13,
-                jsonData.strIngredient14,
-                jsonData.strIngredient15,
-                jsonData.strIngredient16,
-                jsonData.strIngredient17,
-                jsonData.strIngredient18,
-                jsonData.strIngredient19,
-                jsonData.strIngredient20
+                jsonData.meals[0].strIngredient1,
+                jsonData.meals[0].strIngredient2,
+                jsonData.meals[0].strIngredient3,
+                jsonData.meals[0].strIngredient4,
+                jsonData.meals[0].strIngredient5,
+                jsonData.meals[0].strIngredient6,
+                jsonData.meals[0].strIngredient7,
+                jsonData.meals[0].strIngredient8,
+                jsonData.meals[0].strIngredient9,
+                jsonData.meals[0].strIngredient10,
+                jsonData.meals[0].strIngredient11,
+                jsonData.meals[0].strIngredient12,
+                jsonData.meals[0].strIngredient13,
+                jsonData.meals[0].strIngredient14,
+                jsonData.meals[0].strIngredient15,
+                jsonData.meals[0].strIngredient16,
+                jsonData.meals[0].strIngredient17,
+                jsonData.meals[0].strIngredient18,
+                jsonData.meals[0].strIngredient19,
+                jsonData.meals[0].strIngredient20
             ],
             measurements: [
-                jsonData.strMeasure1,
-                jsonData.strMeasure2,
-                jsonData.strMeasure3,
-                jsonData.strMeasure4,
-                jsonData.strMeasure5,
-                jsonData.strMeasure6,
-                jsonData.strMeasure7,
-                jsonData.strMeasure8,
-                jsonData.strMeasure9,
-                jsonData.strMeasure10,
-                jsonData.strMeasure11,
-                jsonData.strMeasure12,
-                jsonData.strMeasure13,
-                jsonData.strMeasure14,
-                jsonData.strMeasure15,
-                jsonData.strMeasure16,
-                jsonData.strMeasure17,
-                jsonData.strMeasure18,
-                jsonData.strMeasure19,
-                jsonData.strMeasure20
-            ],
-            source: jsonData.strSource
+                jsonData.meals[0].strMeasure1,
+                jsonData.meals[0].strMeasure2,
+                jsonData.meals[0].strMeasure3,
+                jsonData.meals[0].strMeasure4,
+                jsonData.meals[0].strMeasure5,
+                jsonData.meals[0].strMeasure6,
+                jsonData.meals[0].strMeasure7,
+                jsonData.meals[0].strMeasure8,
+                jsonData.meals[0].strMeasure9,
+                jsonData.meals[0].strMeasure10,
+                jsonData.meals[0].strMeasure11,
+                jsonData.meals[0].strMeasure12,
+                jsonData.meals[0].strMeasure13,
+                jsonData.meals[0].strMeasure14,
+                jsonData.meals[0].strMeasure15,
+                jsonData.meals[0].strMeasure16,
+                jsonData.meals[0].strMeasure17,
+                jsonData.meals[0].strMeasure18,
+                jsonData.meals[0].strMeasure19,
+                jsonData.meals[0].strMeasure20
+            ]
         }
     }
     catch (e) {
