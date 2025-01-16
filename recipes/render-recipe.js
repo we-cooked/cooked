@@ -23,15 +23,17 @@ export const renderRecipeModal = (recipeEl, recipe) => {
     ingredientsHeading.textContent = "Ingredients";
     ingredientsHeading.style.textDecoration = "underline";
     const ingredients = document.createElement("ul");
+    ingredients.ariaLabel = "list of ingredients and their measurements";
     for (let i = 0; i < recipe.ingredients.length; i++) {
         // break when `recipe.ingredients[i]` or `recipe.measurements` is falsey
         if (!recipe.ingredients[i] || !recipe.measurements[i]) break;
         const li = document.createElement('li');
 
-        // ingredient measurement and name
+        // ingredient measurement a name
         const ingredient = document.createElement('p');
-        ingredient.textContent = `${recipe.measurements[i]} ${recipe.ingredients[i]}`
-        
+        ingredient.textContent = `${recipe.measurements[i]} ${recipe.ingredients[i]}`;
+        ingredient.ariaLabel = `${recipe.measurements[i]} of ${recipe.ingredients[i]} are needed`
+
         li.appendChild(ingredient);
 
         ingredients.appendChild(li);
@@ -43,9 +45,11 @@ export const renderRecipeModal = (recipeEl, recipe) => {
     instructionsHeading.style.textDecoration = "underline";
     const instructions = document.createElement('p');
     instructions.textContent = recipe.instructions;
+    instructions.ariaLabel = `instructions for ${recipe.meal}`
 
     // close dialog
     const close = document.createElement('button');
+    close.ariaLabel = "click to close modal";
     close.textContent = 'Close';
     close.focus();
 
