@@ -1,3 +1,8 @@
+/**
+ * Retrieves a specific food and its recipe
+ * @param {Integer} urlKey ID of specific food
+ * @returns object containing information about a specific food and its recipe
+ */
 const getRecipe = async urlKey => {
     try {
         const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${urlKey}`);

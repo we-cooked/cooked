@@ -1,3 +1,8 @@
+/**
+ * Renders modal to display a specific food and its recipe
+ * @param {Element} recipeEl element to add modal too
+ * @param {Object} recipe object containing information about a specific food and its recipe
+ */
 export const renderRecipeModal = (recipeEl, recipe) => {
     const dialog = document.createElement('dialog');
 
