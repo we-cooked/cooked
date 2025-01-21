@@ -1,14 +1,91 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  /* font-weight: 400; */
+  text-align: center;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #b33f0a;
+  background-color: #e4bba8;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#title {
+  font-size: 60px;
+  /* border-color: rgb(211, 42, 16);
+  border-style: solid; */
+  padding-left: 0px;
+  margin: 25px;
+  margin-top: -100px;
+  display: inline-block;
+}
+h1 {
+  margin: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  /* -webkit-text-stroke: 2px #ffffff; */
+}
+#description h3 {
+  font-size: 30px;
+  font-weight: 300;
+}
+#description {
+  padding-bottom: 30px;
+  margin-bottom: 25px;
+}
+#dropdown label {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+#dropdown select {
+  width: 200px; /* Adjust width */
+  height: 40px; /* Adjust height */
+  font-size: 20px; /* Change font size of dropdown text */
+  padding: 5px; /* Add padding inside the dropdown */
+  border: 1px solid #ccc; /* Style the border */
+  border-radius: 6px; /* Add rounded corners */
+  color: #67280b;
+  text-align: center;
+}
+#dropdown {
+  display: flex;
+  flex-direction: column; /* Stack label and select vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  border-style: solid;
+  border-radius: 15px;
+  background-color: #ffffff80;
+  padding-top: 10px;
+  padding: 20px;
+  width: fit-content;
+  margin: 0 auto;
+  border-color: #ccc;
+  border-width: 1px;
+}
+#cuisine-data {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#cuisine-data h1 {
+  font-size: 52px;
+}
+#cuisine-data h3 {
+  font-size: 36px;
+  font-weight: 300;
+  width: 75vw;
+}
+
+/* Medium screens (e.g., tablets, 768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #title {
+    margin-top: -150px;
+  }
+}
+
+/* Large screens (e.g., desktops, wider than 1024px) */
+@media (min-width: 1025px) {
+  #title {
+    margin-top: -200px;
+  }
 }
