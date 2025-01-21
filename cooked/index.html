@@ -8,24 +8,33 @@
   </head>
   <body>
     <div id="app">
-      <h1>we cooked</h1>
-      <h3>learn about cuisines around the world, and try a new recipe!</h3>
-      <script>
-        const testRoute = async (url) => {
-          const response = await fetch(url);
-          const data = await response.json();
-          console.log("data:", data);
-          console.log(data.meals.length);
-          data.meals.forEach((meal) => console.log(meal.strArea));
-        };
-
-        const url1 =
-          "https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian";
-        const url2 = "https://www.themealdb.com/api/json/v1/1/list.php?a=list";
-
-        testRoute(url1);
-        testRoute(url2);
-      </script>
+      <div class="container">
+        <svg viewBox="0 0 500 200" preserveAspectRatio="xMinYMin meet">
+          <path
+            d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z"
+            style="stroke: none; fill: #e19470"
+          ></path>
+        </svg>
+      </div>
+      <div id="title">
+        <h1>we cooked</h1>
+      </div>
+      <div id="description">
+        <h3>learn: about cuisines around the world</h3>
+        <h3>try: new recipes worth bragging about</h3>
+        <h3>eat: and enjoy the fruits of your labor</h3>
+      </div>
+      <div id="dropdown">
+        <label for="cuisines">select a cuisine:</label>
+        <select name="cuisines" id="cuisines">
+          <option value="">--Select--</option>
+        </select>
+      </div>
+      <div id="cuisine-test"></div>
+      <div id="cuisine-data">
+        <h1>where do you want to learn about?</h1>
+        <h3>don't worry, you can change your mind later ;)</h3>
+      </div>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
