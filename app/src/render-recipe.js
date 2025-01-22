@@ -1,6 +1,5 @@
 /**
  * Renders modal to display a specific food and its recipe
- * @param {Element} recipeEl element to add modal too
  * @param {Object} recipe object containing information about a specific food and its recipe
  */
 
@@ -29,16 +28,16 @@ const renderRecipeModal = async (recipe) => {
   ingredientsHeading.textContent = "Ingredients";
   ingredientsHeading.style.textDecoration = "underline";
   const ingredients = document.createElement("ul");
-  ingredients.ariaLabel = "list of ingredients and their measurements";
+  ingredients.setAttribute("aria-label", "list of ingredients and their measurements");
   for (let i = 0; i < recipe.ingredients.length; i++) {
     // break when `recipe.ingredients[i]` or `recipe.measurements` is falsey
     if (!recipe.ingredients[i] || !recipe.measurements[i]) break;
     const li = document.createElement("li");
 
-    // ingredient measurement a name
+    // ingredient measurement and name
     const ingredient = document.createElement("p");
     ingredient.textContent = `${recipe.measurements[i]} ${recipe.ingredients[i]}`;
-    ingredient.ariaLabel = `${recipe.measurements[i]} of ${recipe.ingredients[i]} are needed`;
+    ingredient.setAttribute("aria-label", `${recipe.measurements[i]} of ${recipe.ingredients[i]} are needed`);
 
     li.appendChild(ingredient);
 
@@ -51,11 +50,11 @@ const renderRecipeModal = async (recipe) => {
   instructionsHeading.style.textDecoration = "underline";
   const instructions = document.createElement("p");
   instructions.textContent = recipe.instructions;
-  instructions.ariaLabel = `instructions for ${recipe.meal}`;
+  instructions.setAttribute("aria-label", `instructions for ${recipe.meal}`);
 
   // close dialog
   const close = document.createElement("button");
-  close.ariaLabel = "click to close modal";
+  close.setAttribute("aria-label", "click to close modal");
   close.textContent = "Close";
   close.focus();
 
@@ -71,6 +70,7 @@ const renderRecipeModal = async (recipe) => {
   container.appendChild(dialog);
 
   dialog.showModal();
+
   console.log("Modal is shown"); // Debugging log
 };
 
