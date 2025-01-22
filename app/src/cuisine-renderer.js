@@ -5,6 +5,9 @@ import renderRecipeModal from "./render-recipe";
 
 const cuisineURL = "https://www.themealdb.com/api/json/v1/1/list.php?a=list";
 
+/**
+ * Renders cuisines and their dishes
+ */
 const renderCuisines = async () => {
   //render cuisines in a dropdown, then generate title and blurb underneath
   const cuisineArray = await fetchCuisines(cuisineURL);
