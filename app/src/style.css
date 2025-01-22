@@ -62,6 +62,7 @@ h1 {
   border-width: 1px;
 }
 #cuisine-data {
+  position: relative;
   margin-top: 100px;
   display: flex;
   flex-direction: column;
@@ -94,6 +95,32 @@ h1 {
   gap: 20px; /* Space between grid items */
   width: 80%; /* Adjust grid width */
   margin: 20px auto 0 auto; /* Center grid below blurb */
+}
+
+dialog {
+  background-color: #e8e2e0;
+  width: 80%; /* Set a default width */
+  max-width: 800px; /* Restrict the maximum width */
+  height: auto; /* Let height adjust naturally */
+  max-height: 80%; /* Restrict maximum height to 80% of the viewport */
+  overflow: auto; /* Enable scrolling for overflow */
+  margin: auto; /* Center the dialog */
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5); /* Dim the background */
+}
+
+dialog h4 {
+  font-size: 24px;
+}
+dialog p {
+  font-weight: 200px;
 }
 
 /* Medium screens (e.g., tablets, 768px to 1024px) */

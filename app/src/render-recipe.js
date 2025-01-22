@@ -18,11 +18,11 @@ const renderRecipeModal = async (recipe) => {
 
   // type of food
   const category = document.createElement("h4");
-  category.textContent = recipe.category;
+  category.textContent = `Category: ${recipe.category}`;
 
   // ethnic origin of food
   const area = document.createElement("h4");
-  area.textContent = recipe.area;
+  area.textContent = `Cuisine: ${recipe.area}`;
 
   // ingredients
   const ingredientsHeading = document.createElement("h3");
