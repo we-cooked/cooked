@@ -9,7 +9,7 @@ const cuisineURL = "https://www.themealdb.com/api/json/v1/1/list.php?a=list";
  * Renders cuisines and their dishes
  */
 const renderCuisines = async () => {
-  //render cuisines in a dropdown, then generate title and blurb underneath
+  // render cuisines in a dropdown, then generate title and blurb underneath
   const cuisineArray = await fetchCuisines(cuisineURL);
   console.log(cuisineArray);
   const dropdown = document.getElementById("cuisines");
@@ -50,7 +50,7 @@ const renderCuisines = async () => {
       div.append(p, img);
       recipeContainer.append(div);
 
-      //add event listeners
+      // add event listeners
       div.addEventListener("click", async () => {
         console.log(`Clicked recipe ID: ${recipe.idMeal}`);
         const recipeData = await getRecipe(recipe.idMeal);
