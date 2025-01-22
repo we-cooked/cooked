@@ -75,6 +75,26 @@ h1 {
   font-weight: 300;
   width: 75vw;
 }
+#cuisine-data p {
+  display: grid;
+  color: #67280b;
+  font-size: 18px;
+  font-weight: bold;
+}
+#cuisine-data img {
+  max-width: 300px;
+}
+
+#recipes {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px; /* Space between grid items */
+  width: 80%; /* Adjust grid width */
+  margin: 20px auto 0 auto; /* Center grid below blurb */
+}
 
 /* Medium screens (e.g., tablets, 768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
