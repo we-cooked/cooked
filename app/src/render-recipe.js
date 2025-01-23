@@ -2,7 +2,6 @@
  * Renders modal to display a specific food and its recipe
  * @param {Object} recipe object containing information about a specific food and its recipe
  */
-
 const renderRecipeModal = async (recipe) => {
   const dialog = document.createElement("dialog");
 
