@@ -93,6 +93,9 @@ const renderCuisines = async () => {
   });
 };
 
+/**
+ * Renders view of bookmarks and buttons for bookmarking
+ */
 const renderBookmarksView = async () => {
   const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
   const bookmarkedRecipes = document.getElementById('bookmarked-recipes');
@@ -142,6 +145,9 @@ const renderBookmarksView = async () => {
 };
 
 // Add this to your initialization code
+/**
+ * Initializes buttons for navigation, dropdown menu of cuisines, view of cuisines, and descriptions of cuisines
+ */
 const initializeNavigation = () => {
   const homeBtn = document.getElementById('home-btn');
   const bookmarksBtn = document.getElementById('bookmarks-btn');
