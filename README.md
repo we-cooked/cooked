@@ -24,6 +24,10 @@ Click on a meal to view its recipe.
 
 ![1738942753528](https://github.com/user-attachments/assets/63c44dbe-8235-40cf-94c5-7381b354a0f1)
 
+Bookmark recipes for future reference.
+
+![image](https://github.com/user-attachments/assets/dbaed937-63c2-451b-95ea-fb85583759af)
+
 
 **Technologies Used**
 	- JavaScript
